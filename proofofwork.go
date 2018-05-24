@@ -1,11 +1,11 @@
 package main
 
 import (
-	"math/big"
 	"bytes"
+	"crypto/sha256"
 	"fmt"
 	"math"
-	"crypto/sha256"
+	"math/big"
 )
 
 var (
@@ -15,7 +15,7 @@ var (
 const targetBits = 24
 
 type ProofOfWork struct {
-	block *Block
+	block  *Block
 	target *big.Int
 }
 
